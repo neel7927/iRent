@@ -1,2 +1,30 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <%= image_tag ('/images/banner/kenny-eliason-G_GWtt1iUs-unsplash.jpg'), class: "d-block w-100", alt: 'First Slide' %>
+      <%# <img class="d-block w-100" src="..." alt="First slide"> %>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag ('/images/banner/jessy-smith-zFOm6KzA-7g-unsplash.jpg'), class: "d-block w-100", alt: 'Second Slide' %>
+      <%# <img class="d-block w-100" src="..." alt="Second slide"> %>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag ('/images/banner/marvin-meyer-SYTO3xs06fU-unsplash.jpg'), class: "d-block w-100", alt: 'Third Slide' %>
+      <%# <img class="d-block w-100" src="..." alt="Third slide"> %>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag ('/images/banner/planetcare-23coWmkTNSg-unsplash.jpg'), class: "d-block w-100", alt: 'Fourth Slide' %>
+    </div>
+    <div class="carousel-item">
+      <%= image_tag ('/images/banner/ppeng-CtkMvKuSRKg-unsplash.jpg'), class: "d-block w-100", alt: 'Fifth Slide' %>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
