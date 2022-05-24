@@ -1,0 +1,24 @@
+ul,
+li {
+  list-style: none;
+}
+
+.footer {
+  padding: 16px 0;
+  background-color: $green;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+}
+
+.footer-links li a {
+  margin-right: 16px;
+  margin-bottom: 0;
+  color: $white;
+}
+
+.footer-links li:last-child {
+  margin-right: 0;
+}
