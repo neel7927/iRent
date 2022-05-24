@@ -28,6 +28,9 @@
 require 'faker'
 
 # User.create(email: "lewagon@gmail.com",encrypted_password: "123456")
+Booking.destroy_all
+Item.destroy_all
+
 
 10.times do
   Item.create(
@@ -46,7 +49,7 @@ end
 5.times do
   Booking.create(
     user_id: 1,
-    item_id: rand(1..10),
+    item_id: rand(92..101),
     start_date: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now, format: :default),
     end_date: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now, format: :default),
     total: Faker::Number.positive,
