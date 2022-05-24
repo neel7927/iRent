@@ -5,3 +5,40 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+# require 'json'
+# require 'open-uri'
+
+# url = ''
+# item_ids = URI.open.(url).read
+# items = JSON.parse(item_ids)
+
+# 10.times do |index|
+#   item_id = items[index]
+#   url_item = "url"
+#   item_info = URI.open(url_item).read
+#   Item.create (
+#     name: item[''],
+#     description: item[''],
+#     category: item[''],
+#     # available: item[''],
+#     item_condition: item[''],
+#     average_rating: item[''],
+#   )
+# end
+require 'faker'
+
+# User.create(email: "lewagon@gmail.com",encrypted_password: "123456")
+
+10.times do
+  Item.create(
+    name:Faker::Device.model_name,
+    description:Faker::Lorem.paragraph(sentence_count: 2),
+    price:Faker::Number.decimal(l_digits: 4, r_digits: 2),
+    category: ["Computer","Camera","Gaming","Appliances","Drone"].sample,
+    available: true,
+    item_condition: ["A","B","C"].sample,
+    average_rating: Faker::Number.within(range: 0.0..5.0),
+    user_id: 1
+  )
+  puts "create item"
+end
