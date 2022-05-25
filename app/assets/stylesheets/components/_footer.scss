@@ -4,8 +4,9 @@ li {
 }
 
 .footer {
-  padding: 16px 0;
-  background-color: $green;
+  padding: 10px 0;
+  background-color: $black;
+  height: 60px;
 }
 
 .footer-links {
@@ -14,7 +15,7 @@ li {
 }
 
 .footer-links li a {
-  margin-right: 16px;
+  margin-right: 10px;
   margin-bottom: 0;
   color: $white;
 }
