@@ -1,58 +1,75 @@
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="10000" data-pause="hover">
   <div class="carousel-inner">
+    <ol class="carousel-controls">
+      <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleControls" data-slide-to="1"></li>
+      <li data-target="#carouselExampleControls" data-slide-to="2"></li>
+      <li data-target="#carouselExampleControls" data-slide-to="3"></li>
+      <li data-target="#carouselExampleControls" data-slide-to="4"></li>
+    </ol>
+
     <div class="carousel-item active">
-      <%= image_tag ('/images/banner/kenny-eliason-G_GWtt1iUs-unsplash.jpg'), class: "d-block w-100", alt: 'First Slide' %>
-      <%# <img class="d-block w-100" src="..." alt="First slide"> %>
+      <%= image_tag 'marvin-meyer-SYTO3xs06fU-unsplash.jpg', class: "d-block w-100", alt: 'First Slide' %>
     </div>
+
     <div class="carousel-item">
-      <%= image_tag ('/images/banner/jessy-smith-zFOm6KzA-7g-unsplash.jpg'), class: "d-block w-100", alt: 'Second Slide' %>
-      <%# <img class="d-block w-100" src="..." alt="Second slide"> %>
+      <%= image_tag ('ppeng-CtkMvKuSRKg-unsplash.jpg'), class: "d-block w-100", alt: 'Second Slide' %>
     </div>
+
     <div class="carousel-item">
-      <%= image_tag ('/images/banner/marvin-meyer-SYTO3xs06fU-unsplash.jpg'), class: "d-block w-100", alt: 'Third Slide' %>
-      <%# <img class="d-block w-100" src="..." alt="Third slide"> %>
+      <%= image_tag ('kenny-eliason-G_GWtt1tiUs-unsplash.jpg'), class: "d-block w-100", alt: 'Third Slide' %>
     </div>
+
     <div class="carousel-item">
-      <%= image_tag ('/images/banner/planetcare-23coWmkTNSg-unsplash.jpg'), class: "d-block w-100", alt: 'Fourth Slide' %>
+      <%= image_tag ('planetcare-23coWmkTNSg-unsplash.jpg'), class: "d-block w-100", alt: 'Fourth Slide' %>
     </div>
-    <div class="carousel-item">
-      <%= image_tag ('/images/banner/ppeng-CtkMvKuSRKg-unsplash.jpg'), class: "d-block w-100", alt: 'Fifth Slide' %>
-    </div>
+
+    <button type="button" class="btn btn-danger btn-lg" id="carousel-btn" ><%= link_to "Browse our collection of items", items_index_path, style: 'color: white;' %></button>
   </div>
+
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
+
   <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
+
+
 </div>
 
 <div class="cards">
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(app/assets/images/icon/camera.png)">
+
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), <%= asset_url("/images/icon/camera.png") %>, background-size: cover, background-position: center">
     Camera
   </div>
 
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(app\assets\images\icon\drone.png)">
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), <%= asset_url("/images/icon/drone.png") %>">
     Drone
   </div>
 
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(app\assets\images\icon\electrical-appliance.png)">
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), <%= asset_url("/images/icon/electrical-appliance.png") %>">
     Electrical Appliances
   </div>
 
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(app/assets/images/icon/joystick.png)">
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), <%= asset_url("/images/icon/joystick.png") %>">
     Gaming
   </div>
 
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(app/assets/images/icon/laptop.png)">
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), <%= asset_url("/images/icon/laptop.png") %>">
     Laptops
   </div>
 
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(app/assets/images/icon/speaker.png)">
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), <%= asset_url("/images/icon/speaker.png") %>">
     Speakers
   </div>
 
 
 </div>
+
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   <script src="script.js"></script>
