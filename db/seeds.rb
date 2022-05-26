@@ -49,7 +49,7 @@ end
 5.times do
   Booking.create(
     user_id: 1,
-    item_id: rand(31..37),
+    item_id: rand(81..91),
     start_date: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now, format: :default),
     end_date: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now, format: :default),
     total: Faker::Number.positive,
