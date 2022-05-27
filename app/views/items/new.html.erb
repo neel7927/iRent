@@ -1,2 +1,14 @@
-<h1>Items#new</h1>
-<p>Find me in app/views/items/new.html.erb</p>
+<div class="container-form" >
+      <div class="form">
+        <%= simple_form_for(items_new_path) do |f| %>
+          <%= f.input :name, label: "Name of the item", input_html: { class: "input" } %>
+          <%= f.input :description, input_html: { class: "input" } %>
+          <%= f.input :price, label: "Price of the item", input_html: { class: "input" } %>
+          <%= f.input :category, as: :radio_buttons, collection: ['C1', 'C2', 'C3', 'C4'] %>
+          <%= f.input :item_condition, collection: ["Brand New", "Slightly Used", "Minor Scuffs & Surface Marks", "Moderate Wear", "Well Used"], label: "Item Condition(Please Select)" %>
+          <%= f.input :average_rating, label: "Average Rating", input_html: { class: "input" } %>
+          <%= f.input :image, as: :file, label: "Upload Image", input_html: { class: "input" } %>
+          <%= f.button :submit, "Submit", class: "btn btn-primary btn-blue" %>
+        <% end %>
+      </div>
+    </div>
