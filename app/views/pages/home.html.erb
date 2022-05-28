@@ -40,32 +40,45 @@
 
 </div>
 
+<h2> Find Items by Category </h2>
+
 <div class="cards">
 
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), <%= asset_url("/images/icon/camera.png") %>, background-size: cover, background-position: center">
-    Camera
-  </div>
+  <%= link_to items_index_path(category: "camera") do %>
+    <div class="card" style="width: 12rem; height: 12rem;">
+      <%= image_tag ("icon/camera.png"), class: "card-img-top" %>
+    </div>
+  <% end %>
 
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), <%= asset_url("/images/icon/drone.png") %>">
-    Drone
-  </div>
+  <%= link_to items_index_path(category: "drone") do %>
+    <div class="card" style="width: 12rem; height: 12rem;">
+      <%= image_tag ("icon/drone.png"), class: "card-img-top" %>
+    </div>
+  <% end %>
 
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), <%= asset_url("/images/icon/electrical-appliance.png") %>">
-    Electrical Appliances
-  </div>
+  <%= link_to items_index_path(category: "electrical_appliances") do %>
+    <div class="card" style="width: 12rem; height: 12rem;">
+      <%= image_tag ("icon/electrical-appliance.png"), class: "card-img-top" %>
+    </div>
+  <% end %>
 
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), <%= asset_url("/images/icon/joystick.png") %>">
-    Gaming
-  </div>
+  <%= link_to items_index_path(category: "gaming") do %>
+    <div class="card" style="width: 12rem; height: 12rem;">
+      <%= image_tag ("icon/joystick.png"), class: "card-img-top" %>
+    </div>
+  <% end %>
 
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), <%= asset_url("/images/icon/laptop.png") %>">
-    Laptops
-  </div>
+  <%= link_to items_index_path(category: "laptops") do %>
+    <div class="card" style="width: 12rem; height: 12rem;">
+      <%= image_tag ("icon/laptop.png"), class: "card-img-top" %>
+   </div>
+  <% end %>
 
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), <%= asset_url("/images/icon/speaker.png") %>">
-    Speakers
-  </div>
-
+  <%= link_to items_index_path(category: "speaker") do %>
+    <div class="card" style="width: 12rem; height: 12rem;">
+      <%= image_tag ("icon/speaker.png"), class: "card-img-top" %>
+    </div>
+  <% end %>
 
 </div>
 
