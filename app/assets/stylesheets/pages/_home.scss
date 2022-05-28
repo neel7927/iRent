@@ -25,9 +25,17 @@
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
-  grid-gap: 16px;
+  gap: 16px;
   margin-bottom: 10px;
 }
+
+.jumbotron-home {
+  margin-top: 10px;
+  border-radius: 5px;
+  padding: 4px;
+}
+
+
 
 // .card-category {
 //   height: 128px;
