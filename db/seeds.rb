@@ -26,14 +26,16 @@
 #   )
 # end
 require 'faker'
+require 'open-uri'
 
 # User.create(email: "lewagon@gmail.com",encrypted_password: "123456")
 Booking.destroy_all
 Item.destroy_all
 
+file = URI.open('https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80')
 
-10.times do
-  Item.create(
+
+  item = Item.new(
     name:Faker::Device.model_name,
     description:Faker::Lorem.paragraph(sentence_count: 2),
     price:Faker::Number.decimal(l_digits: 4, r_digits: 2),
@@ -43,8 +45,10 @@ Item.destroy_all
     average_rating: Faker::Number.within(range: 0.0..5.0),
     user_id: 1
   )
+  item.photo.attach(io: file, filename: 'laptop.png', content_type: 'image/png')
   puts "create item"
-end
+  item.save
+
 
 5.times do
   Booking.create(

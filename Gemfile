@@ -33,8 +33,7 @@ gem 'open-uri', '~> 0.2.0'
 # gem 'image_processing', '~> 1.2'
 #gem 'faker'
 gem 'faker'
-#gem 'dotenv-rails'
-gem 'dotenv-rails', groups: [:development, :test]
+
 #gem 'cloudinary'
 gem 'cloudinary', '~> 1.16.0'
 
