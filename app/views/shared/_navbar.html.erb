@@ -13,12 +13,12 @@
         <% if user_signed_in? %>
           <div>
             <li class="nav-item">
-              <button type="button" class="btn btn-outline-success"><%= link_to "Browse items", items_index_path, class: "nav-link" %></button>
+              <button type="button" class="btn btn-outline-success"><%= link_to "Browse items", items_path, class: "nav-link" %></button>
             </li>
           </div>
           <div>
             <li class="nav-item">
-              <button type="button" class="btn btn-outline-success"><%= link_to "List an Item", items_new_path, class: "nav-link" %></button>
+              <button type="button" class="btn btn-outline-success"><%= link_to "List an Item", new_item_path, class: "nav-link" %></button>
             </li>
           </div>
           <div>
@@ -26,7 +26,7 @@
               <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar-large dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                 <%= link_to "Edit Profile", edit_user_registration_path, class: "dropdown-item" %>
-                <%= link_to "Manage your bookings", bookings_index_path, class: "dropdown-item" %>
+                <%= link_to "Manage your bookings", bookings_path, class: "dropdown-item" %>
                 <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
               </div>
             </li>
