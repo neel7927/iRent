@@ -1,2 +1,4 @@
 <h1>Items#show</h1>
 <p>Find me in app/views/items/show.html.erb</p>
+
+<%= cl_image_tag @item.photo.key, height: 300, width: 400, crop: :fill %>
