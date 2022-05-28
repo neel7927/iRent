@@ -1,4 +1,14 @@
-<h1>Items#show</h1>
-<p>Find me in app/views/items/show.html.erb</p>
+<div class = "item_detail">
+    <div class = "item_image"><%= cl_image_tag @item.photo.key, height: 300, width: 500, crop: :fill %></div>
 
-<%= cl_image_tag @item.photo.key, height: 300, width: 400, crop: :fill %>
+    <div class = "item_info">
+      <h2><%=@item.name %></h2>
+      <p><%= @item.description %></p>
+      <p> Rs: <%=@item.price %></p>
+      <p>Item Condition: <%= @item.item_condition%></p>
+      <p>Rating: <%= @item.average_rating %></p>
+      <div>
+      <button class = "btn_rent">Rent</button>
+      </div>
+    </div>
+</div>
