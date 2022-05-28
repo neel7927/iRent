@@ -1,2 +1,88 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="10000" data-pause="hover">
+  <div class="carousel-inner">
+    <ol class="carousel-controls">
+      <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleControls" data-slide-to="1"></li>
+      <li data-target="#carouselExampleControls" data-slide-to="2"></li>
+      <li data-target="#carouselExampleControls" data-slide-to="3"></li>
+      <li data-target="#carouselExampleControls" data-slide-to="4"></li>
+    </ol>
+
+    <div class="carousel-item active">
+      <%= image_tag 'marvin-meyer-SYTO3xs06fU-unsplash.jpg', class: "d-block w-100", alt: 'First Slide' %>
+    </div>
+
+    <div class="carousel-item">
+      <%= image_tag ('ppeng-CtkMvKuSRKg-unsplash.jpg'), class: "d-block w-100", alt: 'Second Slide' %>
+    </div>
+
+    <div class="carousel-item">
+      <%= image_tag ('kenny-eliason-G_GWtt1tiUs-unsplash.jpg'), class: "d-block w-100", alt: 'Third Slide' %>
+    </div>
+
+    <div class="carousel-item">
+      <%= image_tag ('planetcare-23coWmkTNSg-unsplash.jpg'), class: "d-block w-100", alt: 'Fourth Slide' %>
+    </div>
+
+    <button type="button" class="btn btn-danger btn-lg" id="carousel-btn" ><%= link_to "Browse our collection of items", items_index_path, style: 'color: white;' %></button>
+  </div>
+
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+
+
+</div>
+
+<h2> Find Items by Category </h2>
+
+<div class="cards">
+
+  <%= link_to items_index_path(category: "camera") do %>
+    <div class="card" style="width: 12rem; height: 12rem;">
+      <%= image_tag ("icon/camera.png"), class: "card-img-top" %>
+    </div>
+  <% end %>
+
+  <%= link_to items_index_path(category: "drone") do %>
+    <div class="card" style="width: 12rem; height: 12rem;">
+      <%= image_tag ("icon/drone.png"), class: "card-img-top" %>
+    </div>
+  <% end %>
+
+  <%= link_to items_index_path(category: "electrical_appliances") do %>
+    <div class="card" style="width: 12rem; height: 12rem;">
+      <%= image_tag ("icon/electrical-appliance.png"), class: "card-img-top" %>
+    </div>
+  <% end %>
+
+  <%= link_to items_index_path(category: "gaming") do %>
+    <div class="card" style="width: 12rem; height: 12rem;">
+      <%= image_tag ("icon/joystick.png"), class: "card-img-top" %>
+    </div>
+  <% end %>
+
+  <%= link_to items_index_path(category: "laptops") do %>
+    <div class="card" style="width: 12rem; height: 12rem;">
+      <%= image_tag ("icon/laptop.png"), class: "card-img-top" %>
+   </div>
+  <% end %>
+
+  <%= link_to items_index_path(category: "speaker") do %>
+    <div class="card" style="width: 12rem; height: 12rem;">
+      <%= image_tag ("icon/speaker.png"), class: "card-img-top" %>
+    </div>
+  <% end %>
+
+</div>
+
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+   <script src="script.js"></script>
