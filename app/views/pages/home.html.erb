@@ -1,5 +1,6 @@
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="10000" data-pause="hover">
   <div class="carousel-inner">
+  <!--
     <ol class="carousel-controls">
       <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
       <li data-target="#carouselExampleControls" data-slide-to="1"></li>
@@ -7,7 +8,7 @@
       <li data-target="#carouselExampleControls" data-slide-to="3"></li>
       <li data-target="#carouselExampleControls" data-slide-to="4"></li>
     </ol>
-
+  -->
     <div class="carousel-item active">
       <%= image_tag 'marvin-meyer-SYTO3xs06fU-unsplash.jpg', class: "d-block w-100", alt: 'First Slide' %>
     </div>
@@ -82,7 +83,47 @@
 
 </div>
 
-   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-   <script src="script.js"></script>
+
+  <div class="jumbotron-home" style="background-color: hsl(0, 0%, 90%);">
+    <div class="container">
+      <h2 class="display-4">The Benefits of Choosing iRent!</h2>
+      <p class="lead">We've got all the electronics equipment you need!!</p>
+      <hr class="my-4">
+      <ul>
+        <li>
+          <h3>Finest-quality products</h3>
+          <p>Quality matters to you, and us! That's why we do a strict quality-check for every product.</p>
+        </li>
+        <li>
+          <h3>Free relocation</h3>
+          <p>Changing your house or even your city? We'll relocate your rented products for free.</p>
+        </li>
+        <li>
+          <h3>Free maintenance</h3>
+          <p>Keeping your rented products in a spick and span condition is on us, so you can sit back and relax.</p>
+        </li>
+        <li>
+          <h3>Cancel anytime</h3>
+          <p>Pay only for the time you use the product and close your subscription without any hassle.</p>
+        </li>
+        <li>
+          <h3>Easy return on delivery</h3>
+          <p>If you don't like the product on delivery, you can return it right away—no questions asked.</p>
+        </li>
+        <li>
+          <h3>Keep upgrading</h3>
+          <p>Bored of the same product? Upgrade to try another, newer design and enjoy the change!</p>
+        </li>
+      </ul>
+      <%# <p>It uses utility classes for typography and spacing to space content out within the larger container.</p> %>
+      <p class="lead">
+        <button type="button" class="btn btn-warning btn-lg" id="jumbotron-btn" ><%= link_to "Browse our collection of items", items_index_path, style: 'color: white;' %></button>
+      </p>
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
