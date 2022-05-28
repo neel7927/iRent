@@ -25,7 +25,7 @@
       <%= image_tag ('planetcare-23coWmkTNSg-unsplash.jpg'), class: "d-block w-100", alt: 'Fourth Slide' %>
     </div>
 
-    <button type="button" class="btn btn-danger btn-lg" id="carousel-btn" ><%= link_to "Browse our collection of items", items_index_path, style: 'color: white;' %></button>
+    <button type="button" class="btn btn-danger btn-lg" id="carousel-btn" ><%= link_to "Browse our collection of items", items_path, style: 'color: white;' %></button>
   </div>
 
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -45,37 +45,37 @@
 
 <div class="cards">
 
-  <%= link_to items_index_path(category: "camera") do %>
+<%= link_to items_path(category: "camera") do %>
     <div class="card" style="width: 12rem; height: 12rem;">
       <%= image_tag ("icon/camera.png"), class: "card-img-top" %>
     </div>
   <% end %>
 
-  <%= link_to items_index_path(category: "drone") do %>
+<%= link_to items_path(category: "drone") do %>
     <div class="card" style="width: 12rem; height: 12rem;">
       <%= image_tag ("icon/drone.png"), class: "card-img-top" %>
     </div>
   <% end %>
 
-  <%= link_to items_index_path(category: "electrical_appliances") do %>
+  <%= link_to items_path(category: "electrical_appliances") do %>
     <div class="card" style="width: 12rem; height: 12rem;">
       <%= image_tag ("icon/electrical-appliance.png"), class: "card-img-top" %>
     </div>
   <% end %>
 
-  <%= link_to items_index_path(category: "gaming") do %>
+  <%= link_to items_path(category: "gaming") do %>
     <div class="card" style="width: 12rem; height: 12rem;">
       <%= image_tag ("icon/joystick.png"), class: "card-img-top" %>
     </div>
   <% end %>
 
-  <%= link_to items_index_path(category: "laptops") do %>
+  <%= link_to items_path(category: "laptops") do %>
     <div class="card" style="width: 12rem; height: 12rem;">
       <%= image_tag ("icon/laptop.png"), class: "card-img-top" %>
    </div>
   <% end %>
 
-  <%= link_to items_index_path(category: "speaker") do %>
+  <%= link_to items_path(category: "speaker") do %>
     <div class="card" style="width: 12rem; height: 12rem;">
       <%= image_tag ("icon/speaker.png"), class: "card-img-top" %>
     </div>
@@ -117,7 +117,7 @@
       </ul>
       <%# <p>It uses utility classes for typography and spacing to space content out within the larger container.</p> %>
       <p class="lead">
-        <button type="button" class="btn btn-warning btn-lg" id="jumbotron-btn" ><%= link_to "Browse our collection of items", items_index_path, style: 'color: white;' %></button>
+        <button type="button" class="btn btn-warning btn-lg" id="jumbotron-btn" ><%= link_to "Browse our collection of items", items_path, style: 'color: white;' %></button>
       </p>
     </div>
   </div>
