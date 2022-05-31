@@ -31,7 +31,6 @@ require 'open-uri'
 # User.create(email: "lewagon@gmail.com",encrypted_password: "123456")
 # Booking.destroy_all
 # Item.destroy_all
-
 file = URI.open('https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80')
 
 
@@ -43,21 +42,21 @@ file = URI.open('https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ix
     available: true,
     item_condition: ["A","B","C"].sample,
     average_rating: Faker::Number.within(range: 0.0..5.0),
-    user_id: rand(1..3)
+    user_id: rand(1..9)
   )
   item.photo.attach(io: file, filename: 'laptop.png', content_type: 'image/png')
   puts "create item"
   item.save
 
 
-5.times do
-  Booking.create(
-    user_id: rand(1..3),
-    item_id: rand(31..36),
-    start_date: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now, format: :default),
-    end_date: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now, format: :default),
-    total: Faker::Number.positive,
-    is_accepted: true
-  )
-  puts "create booking"
-end
+  5.times do
+    Booking.create(
+      user_id: 9,
+      item_id: rand(7..11),
+      start_date: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now, format: :default),
+      end_date: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now, format: :default),
+      total: Faker::Number.positive,
+      is_accepted: true
+    )
+    puts "create booking"
+  end
