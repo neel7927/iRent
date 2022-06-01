@@ -13,7 +13,7 @@ a:hover {
 }
 
 .section-products .header h2 {
-    font-size: 1rem;
+    font-size: 2rem;
     color: #fe302f;
     font-weight: 500;
 }
@@ -28,7 +28,7 @@ a:hover {
     max-height: 290px;
     margin-bottom: 20px;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     overflow: hidden;
 }

@@ -12,11 +12,16 @@
               <div class="col-md-6 col-lg-4 col-xl-3">
               <!--Displaying one item-->
                   <div class="single-product">
-                      <div class="part-1" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path item.photo.key, height: 300, width: 500, crop: :fill %>')">
+                      <div class="part-1" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path item.photo.key, height: 300, width: 500 %>')">
                           <ul>
-                              <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+                              <li><a href="#"><i class="fas fa-shopping-cart"></i></a>
+                              </li>
                               <li><a href="#"><i class="fas fa-heart"></i></a></li>
-                              <li><a href="#"><i class="fas fa-expand"></i></a></li>
+                              <li>
+                                <%= link_to item_path(item.id) do %>
+                                  <i class="fas fa-expand"></i>
+                                <% end %>
+                              </li>
                           </ul>
                       </div>
                       <div class="part-2">
