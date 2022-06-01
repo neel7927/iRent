@@ -1,2 +1,16 @@
 <h1>Items#edit</h1>
 <p>Find me in app/views/items/edit.html.erb</p>
+
+
+<h1>Edit To-Do Item</h1>
+
+<%= bootstrap_form_with model: @item, url: item_path(@item), method: :patch, local: true do |f| %>
+
+  <%= f.text_field :name %>
+  <%= f.text_area :description %>
+  <%= f.text_field :price %>
+  <%= f.text_field :category %>
+  <%= f.text_field :item_condition %>
+  <%= f.submit %>
+
+<% end %>

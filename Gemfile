@@ -38,6 +38,8 @@ gem 'faker'
 gem 'cloudinary', '~> 1.16.0'
 #gem 'geocoder'
 gem 'geocoder'
+#gem 'boostrap form'
+gem "bootstrap_form", "~> 5.0"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
