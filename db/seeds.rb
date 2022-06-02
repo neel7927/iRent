@@ -56,7 +56,7 @@ require 'open-uri'
       start_date: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now, format: :default),
       end_date: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now, format: :default),
       total: Faker::Number.positive,
-      is_accepted: true
+      state: "Pending"
     )
     puts "create booking"
   end
