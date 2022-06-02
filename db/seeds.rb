@@ -51,7 +51,7 @@ require 'open-uri'
 
   15.times do
     Booking.create(
-      user_id: (5..10),
+      user_id: rand(5..10),
       item_id: rand(39..55),
       start_date: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now, format: :default),
       end_date: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now, format: :default),
