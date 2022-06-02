@@ -42,7 +42,7 @@ file = URI.open('https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ix
     available: true,
     item_condition: ["A","B","C"].sample,
     average_rating: Faker::Number.within(range: 0.0..5.0),
-    user_id: rand(1..9)
+    user_id: rand(5..10)
   )
   item.photo.attach(io: file, filename: 'laptop.png', content_type: 'image/png')
   puts "create item"
