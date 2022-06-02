@@ -12,10 +12,13 @@ class BookingsController < ApplicationController
   end
 
   def update
-    if @booking.update(booking_params)
-      redirect_to booking_path(@booking)
+    @booking.update(state: "Approved")
+    if @booking.state == "Approved"
+      flash[:success] = "Booking successfully Approved"
+      redirect_to bookings_path
     else
-      render :new
+      flash[:error] = "Booking not approved"
+      redirect_to bookings_path
     end
   end
 

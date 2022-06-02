@@ -1,2 +1,10 @@
-<h1>Bookings#edit</h1>
-<p>Find me in app/views/bookings/edit.html.erb</p>
+<h1>Bookings</h1>
+
+<div class="container-form" >
+      <div class="form">
+        <%= simple_form_for @booking do |f| %>
+          <%= f.input :state, collection: ["Pending", "Approved"], label: "Booking Status(Please Select)" %>
+          <%= f.submit "Submit" , class: "btn btn-primary btn-blue" %>
+        <% end %>
+      </div>
+    </div>

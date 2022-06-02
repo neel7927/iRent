@@ -10,7 +10,7 @@
           <%= booking.item.name %>
         </h2>
         <p>
-          Price = Rs <%= booking.total %>
+          Price = Rs <%= (booking.total).round(2) %>
         </p>
         <p>
           Start Date :<%= booking.start_date.strftime('%Y-%m-%d') %>
@@ -18,6 +18,12 @@
         <p>
           End Date: <%= booking.end_date.strftime('%Y-%m-%d') %>
         </p>
+        <p>
+          Booking Status: <%= booking.state%>
+        </p>
+        <td>
+        <%= link_to 'Edit', edit_booking_path(booking), class: "btn btn-primary"%>
+        </td>
       </div>
     </div>
     </div>
