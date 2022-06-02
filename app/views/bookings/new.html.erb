@@ -1,2 +1,28 @@
-<h1>Bookings#new</h1>
-<p>Find me in app/views/bookings/new.html.erb</p>
+<% @item = Item.find(params[:item_id]) %>
+
+<div class = "booking-card">
+  <div class="booking-Container">
+    <div class="Header">
+      <h3 class="Heading">Your Tech</h3>
+  </div>
+
+  <div class="Cart-Items">
+    <div class="image-box">
+        <%= cl_image_tag @item.photo.key, height: 200, width: 300, crop: :fill %>
+    </div>
+
+    <div class="about">
+      <h1 class="title"><%= @item.name %></h1>
+      <h3 class="subtitle"><%= @item.description %></h3>
+      <h4>Rs: <%= @item.price %></h4>
+    <div class = "date">
+      <%= simple_form_for [@item,@booking] do |f|%>
+        <%= f.input :start_date, as: :date, html5: true %>
+        <%= f.input :end_date, as: :date, html5: true %>
+        <%= f.submit "Rent", class: "button" %>
+      <% end %>
+    </div>
+  </div>
+ </div>
+ <hr>
+</div>
