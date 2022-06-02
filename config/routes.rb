@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   resources :items
-  resources :bookings, only: [:create, :index, :show, :new, :edit, :update]
+  resources :bookings do
+    member do
+      post :approve
+    end
+  end
   resources :reviews, only: [:create, :destroy, :show, :new, :edit, :update]
   get 'about', to: 'pages#about'
   devise_for :users
