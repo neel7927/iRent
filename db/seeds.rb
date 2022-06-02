@@ -49,14 +49,14 @@ file = URI.open('https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ix
   item.save
 
 
-  5.times do
-    Booking.create(
-      user_id: 9,
-      item_id: rand(7..11),
-      start_date: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now, format: :default),
-      end_date: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now, format: :default),
-      total: Faker::Number.positive,
-      is_accepted: true
-    )
-    puts "create booking"
-  end
+  # 5.times do
+  #   Booking.create(
+  #     user_id: 9,
+  #     item_id: rand(7..11),
+  #     start_date: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now, format: :default),
+  #     end_date: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now, format: :default),
+  #     total: Faker::Number.positive,
+  #     is_accepted: true
+  #   )
+  #   puts "create booking"
+  # end
