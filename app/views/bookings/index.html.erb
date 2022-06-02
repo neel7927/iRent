@@ -19,6 +19,9 @@
           End Date: <%= booking.end_date.strftime('%Y-%m-%d') %>
         </p>
         <p>
+        Booked by: <%= booking.user.name %>
+        </p>
+        <p>
           Booking Status: <%= booking.state%>
         </p>
         <td>
