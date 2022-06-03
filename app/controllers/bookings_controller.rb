@@ -2,7 +2,10 @@ class BookingsController < ApplicationController
   before_action :set_booking, only: [:show,:edit,:update]
 
   def index
-    @bookings = current_user.bookings
+    @mybookings = current_user.bookings
+
+    @bookings = Booking.joins(:item).where(item: {user_id: current_user.id} )
+
   end
 
   def show
