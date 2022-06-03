@@ -22,11 +22,11 @@
   top: 500px;
 }
 
-.cards {
+.home .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
   gap: 16px;
-  margin-bottom: 10px;
+  margin-bottom: 24px;
 }
 
 .jumbotron-home {
@@ -35,27 +35,10 @@
   padding: 4px;
 }
 
+.home h2 {
+  margin: 10px;
+}
 
-
-// .card-category {
-//   height: 128px;
-//   width: 128px;
-//   // display: flex;
-//   // justify-content: center;
-//   // align-items: center;
-//   // color: burlywood;
-//   // font-size: 24px;
-//   // font-weight: bold;
-//   // text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-//   border-radius: 5px;
-//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-//   // overflow: hidden;
-// }
-
-// .style-image {
-//   width: 128px;
-//   height: 128px;
-// }
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {

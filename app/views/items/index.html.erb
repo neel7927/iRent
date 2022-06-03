@@ -1,1 +1,39 @@
-<h1>Items</h1>
+<section class="section-products">
+		<div class="container">
+				<div class="row justify-content-center text-center">
+						<div class="col-md-8 col-lg-6">
+								<div class="header">
+										<h2>Featured Products</h2>
+								</div>
+						</div>
+				</div>
+				<div class="row">
+            <% @items.each do |item| %>
+              <div class="col-md-6 col-lg-4 col-xl-3">
+              <!--Displaying one item-->
+                  <div class="single-product">
+                      <div class="part-1" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path item.photo.key, height: 300, width: 500 %>')">
+                          <ul>
+                              <li>
+                                <%= link_to item_path(item.id) do %>
+                                    <i class="fas fa-shopping-cart"></i>
+                                  <% end %>
+                              </li>
+                              <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                              <li>
+                                <%= link_to item_path(item.id) do %>
+                                  <i class="fas fa-expand"></i>
+                                <% end %>
+                              </li>
+                          </ul>
+                      </div>
+                      <div class="part-2">
+                          <h3 class="product-title"><%= item.name %></h3>
+                          <h4 class="product-price">Rs <%= item.price %> per day</h4>
+                      </div>
+                  </div>
+              </div>
+            <% end %>
+				</div>
+		</div>
+</section>

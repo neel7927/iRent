@@ -11,7 +11,7 @@ class ItemsController < ApplicationController
       if @items.empty?
         flash[:error] = "There are <b>#{@items.count}</b> in this category".html_safe
       else
-        flash[:notice] = "There are <b>${@items.count}</b> in this category".html_safe
+        flash[:notice] = "There are <b>#{@items.count}</b> in this category".html_safe
       end
     else
       @items = Item.all
