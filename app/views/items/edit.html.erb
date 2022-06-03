@@ -1,2 +1,15 @@
-<h1>Items#edit</h1>
-<p>Find me in app/views/items/edit.html.erb</p>
+<h1>Edit your booking</h1>
+
+<div class="container-form" >
+      <div class="form">
+        <%= simple_form_for @item do |f| %>
+          <%= f.input :name, label: "Name of the item", input_html: { class: "input" } %>
+          <%= f.input :description, input_html: { class: "input" } %>
+          <%= f.input :price, label: "Price of the item", input_html: { class: "input" } %>
+          <%= f.input :category, as: :radio_buttons, collection: ['Laptop', 'Camera', 'Gaming', 'Appliance', 'Drone', 'Speaker'] %>
+          <%= f.input :item_condition, collection: ["Brand New", "Slightly Used", "Minor Scuffs & Surface Marks", "Moderate Wear", "Well Used"], label: "Item Condition(Please Select)" %>
+          <%= f.input :photo, as: :file %>
+          <%= f.submit "Submit" , class: "btn btn-primary btn-blue" %>
+        <% end %>
+      </div>
+    </div>

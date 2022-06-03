@@ -1,5 +1,6 @@
 class ReviewsController < ApplicationController
   def new
+    @review = Review.new
   end
 
   def create
@@ -9,5 +10,9 @@ class ReviewsController < ApplicationController
   end
 
   def destroy
+    @review = Review.find(params[:id])
+    @review.destroy
+    flash[:notice] = "Review was successfully deleted"
+    redirect_to reviews_path
   end
 end
