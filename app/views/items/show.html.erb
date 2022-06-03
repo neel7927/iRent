@@ -1,6 +1,5 @@
 <div class = "item_detail">
     <div class = "item_image"><%= cl_image_tag @item.photo.key, height: 300, width: 500, crop: :fill %></div>
-
     <div class = "item_info">
       <h2><%=@item.name %></h2>
       <p><%= @item.description %></p>

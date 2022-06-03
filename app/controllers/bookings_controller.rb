@@ -28,8 +28,14 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
+    @booking.user = current_user
+    @item = Item.find(params[:item_id])
+    @booking.item = @item
+    book_start_date =  Date.parse(params[:booking][:start_date])
+    book_end_date =  Date.parse(params[:booking][:end_date])
+    @booking.total = @booking.item.price * (book_end_date - book_start_date).to_i
     if @booking.save
-      redirect_to booking_path(@booking)
+      redirect_to bookings_path
     else
       render :new
     end

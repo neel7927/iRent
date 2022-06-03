@@ -4,7 +4,9 @@
   <% @bookings.each do |booking| %>
     <div class="column">
       <div class="card">
+      <%if booking.item.photo.attached? %>
       <%= cl_image_tag booking.item.photo.key%>
+      <% end %>
       <div class="card-product-infos">
         <h2>
           <%= booking.item.name %>
