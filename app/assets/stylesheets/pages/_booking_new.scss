@@ -77,13 +77,17 @@
  margin-bottom: 2%;
  }
  .about .subtitle{
-  line-height: 10px;
+  // line-height: 10px;
   font-size: 18px;
   font-family: "Open Sans";
   font-weight: 600;
   color: #909090;
-  margin-bottom: 5%;
+  margin-bottom: -1em;
   margin-block-start: 0%;
+  // white-space: pre-wrap;
+  padding-top: 0%;
+  padding-left: 0%;
+  padding-right: 2%;
  }
 
  hr{
