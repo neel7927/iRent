@@ -58,7 +58,9 @@
                     <li class="list-group-item">Booking Status: <%= booking.state %></li>
                   </ul>
                 </p>
-                <%= link_to 'Edit', edit_booking_path(booking), class: "btn btn-primary"%>
+                <% if booking.user_id != current_user.id %>
+                  <%= link_to 'Edit', edit_booking_path(booking), class: "btn btn-primary"%>
+                  <% end %>
               </div>
             </div>
           </div>
