@@ -13,7 +13,7 @@
 
     <div class="about">
       <h1 class="title"><%= @item.name %></h1>
-      <h3 class="subtitle"><%= @item.description %></h3>
+      <p class="subtitle"><%= @item.description %></p>
       <h4>Rs: <%= @item.price %></h4>
     <div class = "date">
       <%= simple_form_for [@item,@booking] do |f|%>
