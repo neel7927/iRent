@@ -15,7 +15,7 @@
                       <div class="part-1" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path item.photo.key, height: 300, width: 500 %>')">
                           <ul>
                               <li>
-                                <%= link_to item_path(item.id) do %>
+                                <%= link_to new_item_booking_path(item) do %>
                                     <i class="fas fa-shopping-cart"></i>
                                   <% end %>
                               </li>
