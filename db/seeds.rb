@@ -27,6 +27,7 @@
 # end
 require 'faker'
 require 'open-uri'
+require 'json'
 
 # User.create(email: "lewagon@gmail.com",encrypted_password: "123456")
 # Booking.destroy_all
@@ -49,14 +50,58 @@ require 'open-uri'
 #   item.save
 
 
-  15.times do
-    Booking.create(
-      user_id: rand(5..10),
-      item_id: rand(39..55),
-      start_date: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now, format: :default),
-      end_date: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now, format: :default),
-      total: Faker::Number.positive,
-      state: "Pending"
-    )
-    puts "create booking"
-  end
+  # 15.times do
+  #   Booking.create(
+  #     user_id: rand(5..10),
+  #     item_id: rand(39..55),
+  #     start_date: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now, format: :default),
+  #     end_date: Faker::Time.between(from: DateTime.now - 1, to: DateTime.now, format: :default),
+  #     total: Faker::Number.positive,
+  #     state: "Pending"
+  #   )
+  #   puts "create booking"
+  # end
+item_list = "db/items.json"
+items_file = File.read(item_list)
+items = JSON.parse(items_file)
+
+user_list = "db/users.json"
+users_file = File.read(user_list)
+users = JSON.parse(users_file)
+
+# Booking.destroy_all
+# Item.destroy_all
+# User.destroy_all
+
+# user_count = users["entries"].count
+# x = 0
+# user_count.times do
+#   user1 = User.create(email: "#{users["entries"][x]["email"]}", password: "#{users["entries"][x]["password"]}")
+#   x += 1
+# end
+
+# user1 = User.create(email: "ibrahim@gmail.com",encrypted_password: "123456")
+
+puts "creating items"
+item_count = items["entries"].count
+i = 0
+item_count.times do
+  item1 = Item.create!(name: "#{items["entries"][i]["name"]}",
+                       description: "#{items["entries"][i]["description"]}",
+                       price: "#{items["entries"][i]["price"]}",
+                       category: "#{items["entries"][i]["category"]}",
+                       item_condition: "#{items["entries"][i]["item_condition"]}",
+                       user_id: "#{items["entries"][i]["user_id"]}"
+                       )
+j = 0
+photo_count = items["entries"][i]["photo"].count
+photo_count.times do
+  photo = items["entries"][i]["photo"][j]
+  file = URI.open("#{photo}")
+  item1.photo.attach(io: file, filename: "item.jpg",content_type: 'image/jpg')
+  j += 1
+end
+i += 1
+end
+
+puts "Items created"

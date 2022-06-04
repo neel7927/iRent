@@ -1,0 +1,166 @@
+{
+  "entries": [
+   {
+    "name": "Macbook Pro 13",
+    "description": "The Apple M1 chip gives the 13 inch MacBook Pro speed and power beyond belief. With up to 7.8x CPU performance.",
+    "price": 1000,
+    "category": "Laptop",
+    "item_condition": "Brand New",
+    "photo": ["https://www.apple.com/v/macbook-pro-13/k/images/overview/hero_endframe__bsza6x4fldiq_large.jpg"],
+    "user_id": 7
+   },
+   {
+    "name": "MacBook Air",
+    "description": "Our thinnest, lightest notebook, completely transformed by the Apple M1 chip.",
+    "price": 800,
+    "category": "Laptop",
+    "item_condition": "Slightly used",
+    "photo": ["https://www.apple.com/v/macbook-air/n/images/overview/hero_endframe__ea0qze85eyi6_large.jpg"],
+    "user_id": 7
+   },
+   {
+    "name": "iMac",
+    "description": "Inspired by the best of Apple. Transformed by the M1 chip. Stands out in any space. Fits perfectly into your life.",
+    "price": 1500,
+    "category": "Laptop",
+    "item_condition": "Brand New",
+    "photo": ["https://www.apple.com/v/imac-24/e/images/overview/color_front_green__eb8qbnemmre6_large.jpg"],
+    "user_id": 7
+   },
+   {
+    "name": "Macbook Pro 16",
+    "description": "The most powerful MacBook Pro ever is here. With the blazing-fast M1 Pro or M1 Max chip — the first Apple silicon designed for pros — you get groundbreaking performance and amazing battery life.",
+    "price": 2000,
+    "category": "Laptop",
+    "item_condition": "Brand New",
+    "photo": ["https://www.apple.com/v/macbook-pro-14-and-16/b/images/overview/hero/intro__ewz1ro7xs14y_large.jpg"],
+    "user_id": 7
+   },
+   {
+    "name": "Macbook Pro 14",
+    "description": "The most powerful MacBook Pro ever is here. With the blazing-fast M1 Pro or M1 Max chip — the first Apple silicon designed for pros — you get groundbreaking performance and amazing battery life.",
+    "price": 1800,
+    "category": "Laptop",
+    "item_condition": "Brand New",
+    "photo": ["https://www.apple.com/v/macbook-pro-14-and-16/b/images/overview/hero/intro__ewz1ro7xs14y_large.jpg"],
+    "user_id": 7
+   },
+   {
+    "name": "Mac Pro",
+    "description": "Power to change everything. Say hello to a Mac that is extreme in every way. With the greatest performance, expansion, and configurability yet, it is a system created to let a wide range of professionals push the limits of what is possible.",
+    "price": 5000,
+    "category": "Laptop",
+    "item_condition": "Brand New",
+    "photo": ["https://cdn.vox-cdn.com/thumbor/VQgbkWVHI5RBn4tJ50vUjxcU1LE=/0x0:2040x1360/920x613/filters:focal(1246x515:1572x841):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/65864240/wwdc2019DSC_4114.0.jpg"],
+    "user_id": 7
+   },
+   {
+    "name": "HERO10 Black",
+    "description": "All-out speed and ultimate ease, now in the most powerful GoPro ever. Powered by the revolutionary new GP2 processor, HERO10 Black shoots 5.3K video with double the frame rate.",
+    "price": 500,
+    "category": "Camera",
+    "item_condition": "Slightly Used",
+    "photo": ["https://static.gopro.com/assets/blta2b8522e5372af40/bltca5c0024f1a4a7a5/614877f9ee502d0e1337ce44/pdp-h10b-standalone-lifestyle-gallery-1.jpg?width=1536&quality=80&auto=webp&disable=upscale"],
+    "user_id": 7
+   },
+   {
+    "name": "Nikon D3400",
+    "description": " With Nikon's D3400 D-SLR camera, you can capture the excitement beautifully and share it right away.",
+    "price": 1000,
+    "category": "Camera",
+    "item_condition": "Slightly Used",
+    "photo": ["https://imaging.nikon.com/lineup/dslr/d3400/img/d3400_01_01.png"],
+    "user_id": 7
+   },
+   {
+    "name": "Nikon D5600",
+    "description": "Nikon's D5600 digital SLR camera is made for creating in a more connected world.",
+    "price": 1500,
+    "category": "Camera",
+    "item_condition": "Brand New",
+    "photo": ["https://imaging.nikon.com/lineup/dslr/d5600/img/d5600_01_01.png"],
+    "user_id": 7
+   },
+   {
+    "name": "DJI Mavic 3",
+    "description": "The iconic Swedish brand Hasselblad designed and built the L2D-20c aerial camera just for DJI Mavic 3, embedding a professional-grade 4/3 CMOS in an unbelievably compact space.",
+    "price": 5000,
+    "category": "Drone",
+    "item_condition": "Brand New",
+    "photo": ["https://stormsend1.djicdn.com/tpc/uploads/carousel/image/102e96e8729f7cf080b65602e3034230@ultra.jpg"],
+    "user_id": 7
+   },
+   {
+    "name": "DJI Air 2S",
+    "description": "Equipped with a 1-inch image sensor and large 7.4μm pixels, DJI Air 2S is capable of capturing every stunning detail.",
+    "price": 3500,
+    "category": "Drone",
+    "item_condition": "Brand New",
+    "photo": ["https://stormsend1.djicdn.com/tpc/uploads/carousel/image/102e96e8729f7cf080b65602e3034230@ultra.jpg"],
+    "user_id": 7
+   },
+    {
+    "name": "DJI Mini 3 Pro",
+    "description": "The mini-sized, mega-capable DJI Mini 3 Pro is just as powerful as it is portable. Weighing less than 249 g and with upgraded safety features, it's not only regulation-friendly, it's also the safest in its series.",
+    "price": 1500,
+    "category": "Drone",
+    "item_condition": "Brand New",
+    "photo": ["https://stormsend1.djicdn.com/tpc/uploads/carousel/image/9421412f8e83278b37b538744a0913b0@ultra.jpg"],
+    "user_id": 7
+   },
+   {
+    "name": "Top Freezer Refrigerator with All-Around Cooling in Stainless Steel",
+    "description": "15.6 cu. ft. capacity Top Freezer Refrigerator with All-Around Cooling is beautifully designed with a modern look that blends seamlessly into your kitchen.",
+    "price": 2000,
+    "category": "Appliance",
+    "item_condition": "Slightly Used",
+    "photo": ["https://image-us.samsung.com/SamsungUS/home/home-appliances/refrigerators/top-freezer/rt16a6195sr-aa/gallery/RT16A6195SR_01_Silver_SCOM.jpg?$product-details-jpg$"],
+    "user_id": 7
+   },
+   {
+    "name": "Smart 44dBA Dishwasher with StormWash+",
+    "description": "A chore like washing dishes is easier and more effective with a washing system that has dual wash arms and a spray jet that blasts water at high pressure.",
+    "price": 1500,
+    "category": "Appliance",
+    "item_condition": "Slightly Used",
+    "photo": ["https://image-us.samsung.com/SamsungUS/home/home-appliances/pf/03022022/SDSAC-3913-Dishwasher_DW80R9950UT-PF_Header_DT_1440x400.jpg?$header-jpg$"],
+    "user_id": 7
+   },
+   {
+    "name": " Large Capacity Smart Front Load Washer with Super Speed Wash",
+    "description": "A chore like washing dishes is easier and more effective with a washing system that has dual wash arms and a spray jet that blasts water at high pressure.",
+    "price": 2000,
+    "category": "Appliance",
+    "item_condition": "Brand New",
+    "photo": ["https://image-us.samsung.com/SamsungUS/home/92121/02102022/gal/WF45B6300AC_01_Champagne_SCOM.jpg?$product-details-jpg$"],
+    "user_id": 7
+   },
+   {
+    "name": "PlayStation 5 Console",
+    "description": "Experience an all-new generation of incredible PlayStation games.",
+    "price": 2000,
+    "category": "Gaming",
+    "item_condition": "Brand New",
+    "photo": ["https://gmedia.playstation.com/is/image/SIEPDC/playstation-5-horizontal-product-shot-01-ps5-en-23nov20?$2400px--t$"],
+    "user_id": 7
+   },
+   {
+    "name": "Nintendo Switch",
+    "description": "Nintendo Switch is designed to fit your life, transforming from home console to portable system in a snap.",
+    "price": 999,
+    "category": "Gaming",
+    "item_condition": "Brand New",
+    "photo": ["https://assets.nintendo.com/image/upload/f_auto/q_auto/dpr_auto/c_scale,w_600/v1/Dev/nin-component/dual-hardware/split-cta-system"],
+    "user_id": 7
+   },
+   {
+    "name": "Bose Soundbar 700",
+    "description": "The Bose Smart Soundbar 900 with Dolby Atmos® goes well beyond that, adding a layer of realism no other soundbar can duplicate.",
+    "price": 999,
+    "category": "Speaker",
+    "item_condition": "Brand New",
+    "photo": ["https://assets.bose.com/content/dam/cloudassets/Bose_DAM/Web/consumer_electronics/global/products/speakers/bose_smart_soundbar_900/product_silo_images/Angus_Ecomm_Gallery_4_Black.jpg/jcr:content/renditions/cq5dam.web.600.600.jpeg"],
+    "user_id": 7
+   }
+  ]
+}
