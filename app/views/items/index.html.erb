@@ -15,9 +15,11 @@
                       <div class="part-1" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path item.photo.key, height: 300, width: 500 %>')">
                           <ul>
                               <li>
-                                <%= link_to new_item_booking_path(item) do %>
+                                <% if item.user != current_user %>
+                                  <%= link_to new_item_booking_path(item), :method => :get do %>
                                     <i class="fas fa-shopping-cart"></i>
                                   <% end %>
+                                <% end %>
                               </li>
                               <li><a href="#"><i class="fas fa-heart"></i></a></li>
                               <li>
