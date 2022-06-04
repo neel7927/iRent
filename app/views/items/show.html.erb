@@ -7,7 +7,9 @@
       <p>Item Condition: <%= @item.item_condition%></p>
       <%# <p>Rating: <%= @item.average_rating %></p>
       <div>
+      <% if @item.user != current_user %>
       <%= button_to "Rent", new_item_booking_path(@item), :class => "btn_rent" , :method => :get%>
+      <% end %>
       </div>
     </div>
 </div>
