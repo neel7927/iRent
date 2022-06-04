@@ -47,8 +47,12 @@ class ItemsController < ApplicationController
   end
 
   def destroy
-    @item.destroy
-    redirect_to items_path
+    if @item.user_id == current_user.id
+      @item.destroy
+      redirect_to items_path
+    else
+      flash[:notice] = "You cannot delete this item"
+    end
   end
 
   private
