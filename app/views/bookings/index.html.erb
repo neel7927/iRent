@@ -1,71 +1,70 @@
-<h1> Bookings from other users </h1>
-
-<div class="row">
-  <% @bookings.each do |booking| %>
-    <div class="column">
-      <div class="card">
-      <%if booking.item.photo.attached? %>
-      <%= cl_image_tag booking.item.photo.key%>
+<div class="bookings">
+  <div class="booking">
+    <h2>Bookings that require your approval</h2>
+    <div class="row">
+      <% if @bookings.empty? %>
+        <div class="card">
+          <p>It seems there are no bookings from other users yet.</p>
+        </div>
+      <% else %>
+        <% @bookings.each do |booking| %>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <!--One booking-->
+            <div class="card" style="width: 18rem;">
+              <%= cl_image_tag booking.item.photo.key, class: "card-img-top", height: "200px" %>
+              <!--<img class="card-img-top" src="..." alt="Card image cap">-->
+              <div class="card-body">
+                <h5 class="card-title"><%= booking.item.name %></h5>
+                <p class="card-text">
+                  <ul class="list-group">
+                    <li class="list-group-item">Price = Rs <%= (booking.total).round(2) %> for <%= (booking.total/booking.item.price).to_i %> days</li>
+                    <li class="list-group-item">Start Date :<%= booking.start_date.strftime('%Y-%m-%d') %></li>
+                    <li class="list-group-item">End Date: <%= booking.end_date.strftime('%Y-%m-%d') %></li>
+                    <li class="list-group-item">Booked by: <%= booking.user.name %></li>
+                    <li class="list-group-item">Booking Status: <%= booking.state %></li>
+                  </ul>
+                </p>
+                <%= link_to 'Edit', edit_booking_path(booking), class: "btn btn-primary"%>
+              </div>
+            </div>
+          </div>
+        <% end %>
       <% end %>
-      <div class="card-product-infos">
-        <h2>
-          <%= booking.item.name %>
-        </h2>
-        <p>
-          Price = Rs <%= (booking.total).round(2) %>
-        </p>
-        <p>
-          Start Date :<%= booking.start_date.strftime('%Y-%m-%d') %>
-        </p>
-        <p>
-          End Date: <%= booking.end_date.strftime('%Y-%m-%d') %>
-        </p>
-        <p>
-        Booked by: <%= booking.user.name %>
-        </p>
-        <p>
-          Booking Status: <%= booking.state%>
-        </p>
-        <td>
-        <%= link_to 'Edit', edit_booking_path(booking), class: "btn btn-primary"%>
-        </td>
-      </div>
     </div>
-    </div>
-  <% end %>
-</div>
+  </div>
 
-<h1> Bookings from current user </h1>
+  <div class="booking">
+    <h2>Your Bookings</h2>
+    <div class="row">
+      <% if @mybookings.empty? %>
+        <div class="card">
+          <p>It seems you have not booked any items yet.</p>
+        </div>
+      <% else %>
+        <% @mybookings.each do |booking| %>
+          <div class="col-md-6 col-lg-4 col-xl-3">
+            <!--One booking-->
+            <div class="card" style="width: 18rem;">
+              <%= cl_image_tag booking.item.photo.key, class: "card-img-top", height: "200px" %>
+              <!--<img class="card-img-top" src="..." alt="Card image cap">-->
+              <div class="card-body">
+                <h5 class="card-title"><%= booking.item.name %></h5>
+                <p class="card-text">
+                  <ul class="list-group">
+                    <li class="list-group-item">Price = Rs <%= (booking.total).round(2) %> for <%= (booking.total/booking.item.price).to_i %> days</li>
+                    <li class="list-group-item">Start Date :<%= booking.start_date.strftime('%Y-%m-%d') %></li>
+                    <li class="list-group-item">End Date: <%= booking.end_date.strftime('%Y-%m-%d') %></li>
+                    <li class="list-group-item">Booked by: <%= booking.user.name %></li>
+                    <li class="list-group-item">Booking Status: <%= booking.state %></li>
+                  </ul>
+                </p>
+                <%= link_to 'Edit', edit_booking_path(booking), class: "btn btn-primary"%>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
 
-<div class="row">
-  <% @mybookings.each do |booking| %>
-    <div class="column">
-      <div class="card">
-      <%= cl_image_tag booking.item.photo.key%>
-      <div class="card-product-infos">
-        <h2>
-          <%= booking.item.name %>
-        </h2>
-        <p>
-          Price = Rs <%= (booking.total).round(2) %>
-        </p>
-        <p>
-          Start Date :<%= booking.start_date.strftime('%Y-%m-%d') %>
-        </p>
-        <p>
-          End Date: <%= booking.end_date.strftime('%Y-%m-%d') %>
-        </p>
-        <p>
-        Booked by: <%= booking.user.name %>
-        </p>
-        <p>
-          Booking Status: <%= booking.state%>
-        </p>
-        <td>
-        <%= link_to 'Edit', edit_booking_path(booking), class: "btn btn-primary"%>
-        </td>
-      </div>
-    </div>
-    </div>
-  <% end %>
 </div>
